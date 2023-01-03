@@ -1,23 +1,24 @@
 import React, { useState } from "react";
 import { FaRegChartBar, FaTh, FaBars, FaThList } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import "./Sidenav.css";
 const Sidenav = (children) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   const menuItem = [
     {
       path: "/dash",
-      name: "Dashboard",
+      name: <b>Dashboard</b>,
       icon: <FaTh />,
     },
     {
       path: "/about",
-      name: "About",
+      name: <b>About</b>,
       icon: <FaRegChartBar />,
     },
     {
       path: "/prod",
-      name: "Product",
+      name: <b>Product</b>,
       icon: <FaThList />,
     },
   ];
@@ -31,12 +32,14 @@ const Sidenav = (children) => {
             <FaBars />
           </div> */}
         </div>
-        {menuItem.map((item, index) => (
-          <NavLink to={item.path} key={index} className="link">
-            <div className="icon">{item.icon}</div>
-            <div className="link-text">{item.name}</div>
-          </NavLink>
-        ))}
+        <div className="move">
+          {menuItem.map((item, index) => (
+            <NavLink to={item.path} key={index} className="link">
+              <div className="icon">{item.icon}</div>
+              <div className="link-text">{item.name}</div>
+            </NavLink>
+          ))}
+        </div>
       </div>
       {/* <main>{children}</main> */}
     </div>

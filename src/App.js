@@ -9,6 +9,8 @@ import { About } from "./Pages/About";
 import ProductList from "./Pages/ProductList";
 import Table from "./Pages/table";
 import Product from "./component/product/Product";
+import Highcharts from "./Pages/HiCharts/Highcharts";
+import Modal from "./Pages/Modal";
 function App() {
   return (
     <div>
@@ -26,6 +28,8 @@ function App() {
           <Route path="/dash" element={<Dashboard />} />
           <Route path="/about" element={<About />} />
           <Route path="/prod" element={<ProductList />} />
+          <Route path="/hi" element={<Highcharts />} />
+          <Route path="/modal" element={<Modal />} />
         </Routes>
         {/* </Sidenav> */}
       </BrowserRouter>
