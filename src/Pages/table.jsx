@@ -112,6 +112,15 @@ function TableComponent() {
                   <button
                     type="button"
                     className="btn btn-sm btn-danger"
+                    style={{ width: "60px" }}
+                    onClick={() => setmodal(true)}
+                  >
+                    ADD
+                  </button>
+                  &nbsp;
+                  <button
+                    type="button"
+                    className="btn btn-sm btn-danger"
                     onClick={() => setmodal(true)}
                   >
                     Delete
