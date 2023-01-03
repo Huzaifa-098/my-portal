@@ -3,17 +3,31 @@ import "./App.css";
 import SignUp from "./component/Signup";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./component/Navbar";
-import SideNavBar from "./component/Sidenav";
+import Sidenav from "./component/Sidnav/Sidenav";
+import Dashboard from "./Pages/Dashboard";
+import { About } from "./Pages/About";
+import ProductList from "./Pages/ProductList";
+import Table from "./Pages/table";
+import Product from "./component/product/Product";
 function App() {
   return (
-    <div className="container">
+    <div>
       <BrowserRouter>
         <Routes>
+          <Route path="/pro" element={<Product />} />
+          <Route path="/tab" element={<Table />} />
+          <Route path="/log" element={<Login />} />
           <Route path="/" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/nav" element={<Navbar />} />
-          <Route path="/sidnav" element={<SideNavBar />} />
+          {/* </Routes> */}
+          {/* <Route path="/sidnav" element={<Sidenav />} /> */}
+          {/* <Routes> */}
+          <Route path="/dash" element={<Dashboard />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/prod" element={<ProductList />} />
         </Routes>
+        {/* </Sidenav> */}
       </BrowserRouter>
     </div>
   );
